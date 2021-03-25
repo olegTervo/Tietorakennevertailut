@@ -1,8 +1,11 @@
-# Yleikuvaus
+# Määrittelydokumentti
+
+
+## Yleikuvaus
 
 Työssä vertailen erillisia Javan hakualgoritmeja ja toteutan samat algoritmit ja tietorakenteet tutkimuksen varten.
 
-## Tietorakenteet
+### Tietorakenteet
 
  - Taulukko  
  - LinkedList  
@@ -10,15 +13,15 @@ Työssä vertailen erillisia Javan hakualgoritmeja ja toteutan samat algoritmit 
  - Jono  
  - Hajautustaulu  
 
-## Algoritmit
+### Algoritmit
 
  - Get  
  - Find  
 
-# Ongelma
+## Ongelma
 
 Vertailaan haku indeksilla, haku numerolla ja haku merrkijonolla erillisella tietorakennella.
 
-# Lähteet
+## Lähteet
 
 tirakirja
