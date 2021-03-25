@@ -1,9 +1,6 @@
 # Määrittelydokumentti
 
-
-## Yleikuvaus
-
-Työssä vertailen erillisia Javan hakualgoritmeja ja toteutan samat algoritmit ja tietorakenteet tutkimuksen varten.
+Työssä vertailen erillisiä Javan hakualgoritmeja ja toteutan samat algoritmit ja tietorakenteet tutkimuksen varten.
 
 ### Tietorakenteet
 
@@ -20,7 +17,7 @@ Työssä vertailen erillisia Javan hakualgoritmeja ja toteutan samat algoritmit 
 
 ## Ongelma
 
-Vertailaan haku indeksilla, haku numerolla ja haku merrkijonolla erillisella tietorakennella.
+Vertaillaan haku indeksilla, haku numerolla ja haku merkkijonolla erillisellä tietorakennella.
 
 ## Lähteet
 
