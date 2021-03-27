@@ -9,8 +9,6 @@
 
 ## TODO
 
-- Yksikkötestit
-
-- Testikattavuus
-
+- Yksikkötestit  
+- Testikattavuus  
 - Checkstyle
