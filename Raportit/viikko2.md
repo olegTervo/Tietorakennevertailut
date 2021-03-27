@@ -5,10 +5,6 @@
 - Java project  
 - Määrittelydokumentti  
 - Java app template
-- Yksikkötestit template
-
-## TODO
-
-- Yksikkötestit  
+- Yksikkötestit template  
 - Testikattavuus  
 - Checkstyle
