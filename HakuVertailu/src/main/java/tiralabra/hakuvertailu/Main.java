@@ -3,11 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hakuvertailu;
+package tiralabra.hakuvertailu;
 
-
-import com.sun.prism.paint.Color;
-import java.util.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -17,12 +14,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
 /**
  *
  * @author oleg
  */
-public class HakuVertailu extends Application {
-
+public class Main extends Application{
     private Stage primary;
     private Scene mainScene;
      
@@ -69,5 +66,4 @@ public class HakuVertailu extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

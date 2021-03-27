@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UnitTests;
+package tiralabra.hakuvertailu.test;
 
 import java.util.*;
 import org.junit.After;
@@ -15,11 +15,11 @@ import static org.junit.Assert.*;
  *
  * @author oleg
  */
-public class UnitTest {
+public class JUnitTest {
     
     List testList;
     
-    public UnitTest() {
+    public JUnitTest() {
         testList = new ArrayList<String>();
     }
     
