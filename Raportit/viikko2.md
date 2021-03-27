@@ -7,4 +7,6 @@
 - Java app template
 - Yksikkötestit template  
 - Testikattavuus  
-- Checkstyle
+- Checkstyle  
+- Testausdokumentti  
+- Käyttöohje  
