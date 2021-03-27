@@ -1,15 +1,13 @@
 # Viikko 2
 
 ## Tehty
-- Ruunkko
-
-- Java project
-
-- Määrittelydokumentti
-
+- Ruunkko  
+- Java project  
+- Määrittelydokumentti  
+- Java app template
+- Yksikkötestit template
 
 ## TODO
-- Java app
 
 - Yksikkötestit
 
