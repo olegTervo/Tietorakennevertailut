@@ -1,8 +1,12 @@
-# Haku Vertailu
+# Tietorakennevertailut
 
 ## Aihe
-Tarkoituksena on sovellus, jolla pysty vertailla erilaisia hakualgoritmeja. Syöte voi olla oma tai sovelluksessa valmis oleva.
-Myös, jos aikaa riittää, tutken vähän javan hakualgoritmeja ja mahdollisesti SQL-server hakualgoritmeja.
+Toteutan 4 tietorakennetta:  
+ - trie
+ - binomial heap
+ - fibonacci heap
+ - puna-musta puu  
+Ja tutkin missä tilanteessa kukin on paras. Vertailen niiden aikavaatimukset ja tarkoitukset.
 
 ## Ohjelmointikieli
 Java
