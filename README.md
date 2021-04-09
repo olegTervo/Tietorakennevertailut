@@ -6,6 +6,7 @@ Toteutan 4 tietorakennetta:
  - binomial heap
  - fibonacci heap
  - puna-musta puu  
+
 Ja tutkin missä tilanteessa kukin on paras. Vertailen niiden aikavaatimukset ja tarkoitukset.
 
 ## Ohjelmointikieli
