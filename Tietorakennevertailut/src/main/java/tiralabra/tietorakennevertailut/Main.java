@@ -1,9 +1,10 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tiralabra.hakuvertailu;
+package tiralabra.tietorakennevertailut;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -30,7 +31,7 @@ public class Main extends Application{
         
         HBox titleBox = new HBox();
         titleBox.setStyle("-fx-alignment: center;");
-        Label title = new Label("Haku Vertailu Home");
+        Label title = new Label("Tietorakennevertailut Home");
         title.setStyle("-fx-font-size: 20px;");
         titleBox.getChildren().add(title);
         //title.setStyle("-fx-content-display: center;");
@@ -59,11 +60,5 @@ public class Main extends Application{
         primary.setTitle("Haku Vertailu");
         primary.setScene(mainScene);
         primary.show();
-    }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
     }
 }

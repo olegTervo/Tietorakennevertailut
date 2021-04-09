@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tiralabra.hakuvertailu.test;
+package tiralabra.tietorakennevertailut.test;
 
 import java.util.*;
 import org.junit.After;
