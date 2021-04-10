@@ -10,7 +10,7 @@ Komento
 mvn package
 ```
 
-generoi hakemistoon _target_ suoritettavan jar-tiedoston _HakuVertailu-1.0-SNAPSHOT.jar_
+generoi hakemistoon _target_ suoritettavan jar-tiedoston _Tietorakennevertailut-1.0-SNAPSHOT.jar_
 
 ### JavaDoc
 
