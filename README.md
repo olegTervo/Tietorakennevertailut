@@ -27,3 +27,4 @@ Arviottu työnlaajuus n. 107 tuntia.
 ## Raportit
 [Viikko 2]( https://github.com/olegTervo/hakuVertailu/blob/master/Raportit/viikko2.md )  
 [Viikko 3]( https://github.com/olegTervo/hakuVertailu/blob/master/Raportit/viikko3.md )  
+[Viikko 4]( https://github.com/olegTervo/hakuVertailu/blob/master/Raportit/viikko4.md )  
