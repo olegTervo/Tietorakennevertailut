@@ -6,7 +6,7 @@
  */
 package tiralabra.tietorakennevertailut;
 
-import tiralabra.tietorakennevertailut.UI.UIHelper;
+import tiralabra.tietorakennevertailut.ui.UIHelper;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -14,11 +14,11 @@ import javafx.stage.Stage;
  *
  * @author oleg
  */
-public class Main extends Application{
+public class Main extends Application {
     private Stage primary;
     @Override
     public void start(Stage primary) throws Exception {
         this.primary = primary;
-        UIHelper.Start(primary);
+        UIHelper.start(primary);
     }
 }

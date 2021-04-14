@@ -65,9 +65,12 @@ public class Trie {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             TrieNode node = current.getChildren().get(ch);
-            if (node == null) return new ArrayList();
-            if (node.isEndOfWord() && i == word.length()-1) 
+            if (node == null) {
+                return new ArrayList();
+            }
+            if (node.isEndOfWord() && i == word.length() - 1) {
                 ret.add(word);
+            }
             current = node;
         }
         
@@ -82,9 +85,12 @@ public class Trie {
         
         for (Character ch : chars) {
             TrieNode node = current.getChildren().get(ch);
-            if (node == null) return new ArrayList();
-            if (node.isEndOfWord()) 
-                ret.add(word + ch);
+            if (node == null) {
+                return new ArrayList();
+            }
+            if (node.isEndOfWord()) {
+                ret.add(word);
+            }
             ret.addAll(getOptions(word + ch, node));
         }
         

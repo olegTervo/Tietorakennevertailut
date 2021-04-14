@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tiralabra.tietorakennevertailut.UI;
+package tiralabra.tietorakennevertailut.ui;
 
-import tiralabra.tietorakennevertailut.UI.AutoCompleteTextField;
+import tiralabra.tietorakennevertailut.ui.AutoCompleteTextField;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -20,7 +20,7 @@ import javafx.stage.Stage;
  */
 public class UIHelper {
     
-    public static void Start(Stage primary){
+    public static void start(Stage primary) {
         primary.setTitle("Tietorakennevertailut");
         primary.setScene(getMainPage());
         primary.show();
