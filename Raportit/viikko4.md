@@ -4,7 +4,6 @@
  - Trie on tehty
  - Testattu 98% Trie toteutuksesta (jacoco)
  - Trie sovelluksessa käytössä (Komennon kenttä anna suositukset)  
-
-## TODO
- - Checkstyle kuntoon
- - Puna-musta puu on aloitettu
+ - Checkstyle kuntoon  
+ - Puna-musta puu on aloitettu  
+ - Puna-musta puu UnitTests aloitettu

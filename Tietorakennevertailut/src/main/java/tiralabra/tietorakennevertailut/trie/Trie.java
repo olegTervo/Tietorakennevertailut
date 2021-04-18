@@ -68,7 +68,7 @@ public class Trie {
             if (node == null) {
                 return new ArrayList();
             }
-            if (node.isEndOfWord() && i == word.length() - 1) {
+            if (node.isEndOfWord() && i == word.length()-1) {
                 ret.add(word);
             }
             current = node;
@@ -89,7 +89,7 @@ public class Trie {
                 return new ArrayList();
             }
             if (node.isEndOfWord()) {
-                ret.add(word);
+                ret.add(word + ch);
             }
             ret.addAll(getOptions(word + ch, node));
         }

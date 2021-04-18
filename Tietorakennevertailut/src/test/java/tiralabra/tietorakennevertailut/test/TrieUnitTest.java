@@ -41,6 +41,7 @@ public class TrieUnitTest {
     public void testContains() {
         test.insert("test");
         Assert.assertTrue(test.containsNode("test"));
+        
         Assert.assertFalse(test.containsNode("smth"));
         Assert.assertFalse(test.containsNode("te"));
     }
@@ -48,13 +49,16 @@ public class TrieUnitTest {
     @Test
     public void testInsertDelete() {
         test.insert("test");
+        
         Assert.assertTrue(test.containsNode("test"));
         test.delete("te");
         Assert.assertTrue(test.containsNode("test"));
         test.delete("st");
         Assert.assertTrue(test.containsNode("test"));
+        
         test.delete("test");
         Assert.assertFalse(test.containsNode("test"));
+        
         Assert.assertTrue(test.isEmpty());
     }
     
