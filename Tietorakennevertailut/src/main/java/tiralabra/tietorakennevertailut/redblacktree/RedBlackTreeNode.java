@@ -17,8 +17,28 @@ public class RedBlackTreeNode implements Comparable {
     
     public int key;
     
+    public boolean isNill() {
+        return this.left == null;
+    }
+    
+    public RedBlackTreeNode(int key, RedBlackTreeNode parent) {
+        this.isRed = true;
+        this.key = key;
+        this.parent = parent;
+        
+        this.left = new RedBlackTreeNode();
+        this.right = new RedBlackTreeNode();
+    }
+    
     public RedBlackTreeNode(int key) {
         this.key = key;
+        this.isRed = true;
+        
+        this.left = new RedBlackTreeNode();
+        this.right = new RedBlackTreeNode();
+    }
+    
+    public RedBlackTreeNode() {
         this.isRed = false;
     }
     
@@ -36,7 +56,7 @@ public class RedBlackTreeNode implements Comparable {
     public RedBlackTreeNode getUncle() {
         RedBlackTreeNode grandparent = getGrandparent();
         if(grandparent != null) {
-            if(grandparent.left.equals(parent)) {
+            if(parent.equals(grandparent.left)) {
                 return grandparent.right;
             }
             return grandparent.left;
@@ -45,46 +65,12 @@ public class RedBlackTreeNode implements Comparable {
         return null;
     }
     
-    public void rotateLeft() {
-        RedBlackTreeNode pivotNode = right;
-        
-        pivotNode.parent = parent;
-        if(parent != null) {
-            if(parent.left.equals(this)){
-                parent.left = pivotNode;
-            } else {
-                parent.right = pivotNode;
-            }
+    public RedBlackTreeNode getSubling() {
+        if(this.equals(this.parent.left)) {
+            return this.parent.right;
+        } else {
+            return this.parent.left;
         }
-        
-        this.right = pivotNode.left;
-        if(pivotNode.left != null) {
-            pivotNode.left.parent = this;
-        }
-        
-        this.parent = pivotNode;
-        pivotNode.left = this;
-    }
-    
-    public void rotateRight() {
-        RedBlackTreeNode pivotNode = left;
-        
-        pivotNode.parent = parent;
-        if(parent != null) {
-            if(parent.left.equals(this)){
-                parent.left = pivotNode;
-            } else {
-                parent.right = pivotNode;
-            }
-        }
-        
-        this.left = pivotNode.right;
-        if(pivotNode.right != null) {
-            pivotNode.right.parent = this;
-        }
-        
-        this.parent = pivotNode;
-        pivotNode.right = this;
     }
 
     @Override
@@ -94,4 +80,22 @@ public class RedBlackTreeNode implements Comparable {
         }
         else return -1;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        if(o == null) return false;
+        
+        if(o.getClass().equals(this.getClass())) {
+            return ((RedBlackTreeNode) o).key - this.key == 0;
+        }
+        else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + this.key;
+        return hash;
+    }
+    
 }
