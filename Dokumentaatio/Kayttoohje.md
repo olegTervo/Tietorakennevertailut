@@ -1,6 +1,4 @@
-## Komentorivitoiminnot
-
-Toimintoja suoritetaan kansiossa, jossa on pom.xml
+# Toimintoja suoritetaan kansiossa, jossa on pom.xml
 
 ### Suoritettavan jarin generointi
 
