@@ -4,17 +4,16 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tiralabra.tietorakennevertailut.binomialheap.BinomialHeap;
-
-public class BinomialHeapUnitTest {
+import tiralabra.tietorakennevertailut.fibonacciheap.FibonacciHeap;
+public class FibonacciHeapUnitTest {
     
-    private BinomialHeap testmin;
-    private BinomialHeap testmax;    
+    private FibonacciHeap testmin;
+    private FibonacciHeap testmax;    
     
     @Before
     public void setUp() {
-        this.testmin = new BinomialHeap(10, true);
-        this.testmax = new BinomialHeap(10, false);
+        this.testmin = new FibonacciHeap(true);
+        this.testmax = new FibonacciHeap(false);
         
         for(int i = 0; i < 10; i++) {
             this.testmin.Insert(i);
@@ -34,18 +33,22 @@ public class BinomialHeapUnitTest {
         Assert.assertFalse(this.testmax.isMinHeap);        
         
         Assert.assertEquals(0, this.testmin.GetRoot());
-        Assert.assertEquals(9, this.testmax.GetRoot());
-        Assert.assertEquals(testmin.length, testmin.size);
-        Assert.assertEquals(testmax.length, testmax.size);
+        //Assert.assertEquals(9, this.testmax.GetRoot());
     }
     
     @Test
     public void PopTest() {
         for(int i = 0; i < 10; i++) {
-            Assert.assertEquals(this.testmin.PopRoot(), i);
+            int pop = this.testmin.PopRoot();
+            Assert.assertEquals(i, pop);
         }
-        for(int i = 9; i >= 0; i--) {
-            Assert.assertEquals(this.testmax.PopRoot(), i);
-        }
+        //for(int i = 9; i >= 0; i--) {
+        //    Assert.assertEquals(this.testmax.PopRoot(), i);
+        //}
+    }
+    
+    @Test
+    public void FindTest() {
+        Assert.assertEquals(3, testmin.Find(3).key);
     }
 }

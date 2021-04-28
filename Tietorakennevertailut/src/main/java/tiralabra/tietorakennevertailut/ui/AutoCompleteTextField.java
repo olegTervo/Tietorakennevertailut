@@ -16,12 +16,9 @@ import java.util.List;
 import tiralabra.tietorakennevertailut.trie.Trie;
 
 public class AutoCompleteTextField extends TextField {
-    /** The existing autocomplete entries. */
     private final Trie entries;
-    /** The popup used to select an entry. */
     private ContextMenu entriesPopup;
 
-    /** Construct a new AutoCompleteTextField. */
     public AutoCompleteTextField() {
         super();
         entries = new Trie();

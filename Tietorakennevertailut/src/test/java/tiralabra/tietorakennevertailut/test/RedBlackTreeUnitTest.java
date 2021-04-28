@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tiralabra.tietorakennevertailut.test;
 
 import org.junit.After;
@@ -12,10 +7,6 @@ import org.junit.Test;
 import tiralabra.tietorakennevertailut.redblacktree.RedBlackTree;
 import tiralabra.tietorakennevertailut.redblacktree.RedBlackTreeNode;
 
-/**
- *
- * @author oleg
- */
 public class RedBlackTreeUnitTest {
     private RedBlackTree test;
     

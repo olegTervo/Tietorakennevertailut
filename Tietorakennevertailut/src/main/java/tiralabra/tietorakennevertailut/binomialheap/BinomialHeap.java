@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tiralabra.tietorakennevertailut.binomialheap;
 
-/**
- *
- * @author oleg
- */
 public class BinomialHeap {
     public int[] heap;
     public int length;
@@ -41,7 +32,7 @@ public class BinomialHeap {
         return 2 * key + 2;
     }
     
-    public void insert(int key) {
+    public void Insert(int key) {
         if(this.size == this.length) {
             return;
         }
@@ -87,15 +78,15 @@ public class BinomialHeap {
         this.size--;
         
         if(this.isMinHeap) {
-            fixMinHeapConflicts(0);
+            FixMinHeapConflicts(0);
         } else {
-            fixMaxHeapConflicts(0);
+            FixMaxHeapConflicts(0);
         }
         
         return root;
     }
     
-    private void fixMinHeapConflicts(int start) {
+    private void FixMinHeapConflicts(int start) {
         int left = Left(start);
         int right = Right(start);
         int smallest = start;
@@ -109,12 +100,12 @@ public class BinomialHeap {
         
         if(smallest != start) {
             Swap(start, smallest);
-            fixMinHeapConflicts(smallest);
+            FixMinHeapConflicts(smallest);
         }
         
     }
     
-    private void fixMaxHeapConflicts(int start) {
+    private void FixMaxHeapConflicts(int start) {
         int left = Left(start);
         int right = Right(start);
         int biggest = start;
@@ -128,7 +119,7 @@ public class BinomialHeap {
         
         if(biggest != start) {
             Swap(start, biggest);
-            fixMaxHeapConflicts(biggest);
+            FixMaxHeapConflicts(biggest);
         }
     }
     

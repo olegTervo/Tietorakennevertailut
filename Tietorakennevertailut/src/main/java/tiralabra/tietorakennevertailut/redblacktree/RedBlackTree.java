@@ -1,14 +1,5 @@
-/*
- * To change node license header, choose License Headers in Project Properties.
- * To change node template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tiralabra.tietorakennevertailut.redblacktree;
 
-/**
- *
- * @author oleg
- */
 public class RedBlackTree {
     public RedBlackTreeNode root;
     

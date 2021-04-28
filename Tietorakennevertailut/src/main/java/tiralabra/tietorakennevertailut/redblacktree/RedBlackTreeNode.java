@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tiralabra.tietorakennevertailut.redblacktree;
 
-/**
- *
- * @author oleg
- */
 public class RedBlackTreeNode implements Comparable {
     public RedBlackTreeNode parent;
     public RedBlackTreeNode left;

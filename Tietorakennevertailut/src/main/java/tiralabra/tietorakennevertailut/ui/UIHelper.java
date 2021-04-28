@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tiralabra.tietorakennevertailut.ui;
 
 import tiralabra.tietorakennevertailut.ui.AutoCompleteTextField;
@@ -14,10 +9,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- *
- * @author oleg
- */
 public class UIHelper {
     
     public static void start(Stage primary) {
