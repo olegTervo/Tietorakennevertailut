@@ -95,6 +95,10 @@ public class RedBlackTreeUnitTest {
         test.insert(2);
         test.insert(1);
         test.insert(3);
+        test.insert(3);
+        test.insert(4);
+        test.insert(5);
+        
         
         Assert.assertTrue(test.contains(new RedBlackTreeNode(1)));
         Assert.assertTrue(test.contains(new RedBlackTreeNode(2)));
@@ -103,9 +107,15 @@ public class RedBlackTreeUnitTest {
         test.delete(new RedBlackTreeNode(1));
         Assert.assertFalse(test.contains(new RedBlackTreeNode(1)));
         test.delete(new RedBlackTreeNode(2));
-        Assert.assertFalse(test.contains(new RedBlackTreeNode(1)));
+        Assert.assertFalse(test.contains(new RedBlackTreeNode(2)));
         test.delete(new RedBlackTreeNode(3));
-        Assert.assertFalse(test.contains(new RedBlackTreeNode(1)));
+        Assert.assertFalse(test.contains(new RedBlackTreeNode(3)));
+        test.delete(new RedBlackTreeNode(4));
+        Assert.assertFalse(test.contains(new RedBlackTreeNode(4)));
+        test.delete(new RedBlackTreeNode(5));
+        Assert.assertFalse(test.contains(new RedBlackTreeNode(5)));
+        
+        Assert.assertTrue(test.root.isNill());
         
     }
 }
