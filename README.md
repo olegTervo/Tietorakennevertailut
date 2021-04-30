@@ -3,8 +3,8 @@
 ## Aihe
 Toteutan 4 tietorakennetta:  
  - trie
- - binomial heap
- - fibonacci heap
+ - binomial keko
+ - fibonacci keko
  - puna-musta puu  
 
 Ja tutkin missä tilanteessa kukin on paras. Vertailen niiden aikavaatimukset ja tarkoitukset.
