@@ -13,13 +13,14 @@ public class BinomialHeapUnitTest {
     
     @Before
     public void setUp() {
-        this.testmin = new BinomialHeap(10, true);
-        this.testmax = new BinomialHeap(10, false);
+        this.testmin = new BinomialHeap();
         
         for(int i = 0; i < 10; i++) {
-            this.testmin.Insert(i);
-            this.testmax.Insert(i);
+            this.testmin.add(i);
         }
+        
+        testmin.printHeap();
+        System.out.println("\n");
     }
     
     @After
@@ -28,24 +29,26 @@ public class BinomialHeapUnitTest {
         this.testmax = null;
     }
     
-    @Test
-    public void InsertTest() {
-        Assert.assertTrue(this.testmin.isMinHeap);
-        Assert.assertFalse(this.testmax.isMinHeap);        
-        
-        Assert.assertEquals(0, this.testmin.GetRoot());
-        Assert.assertEquals(9, this.testmax.GetRoot());
-        Assert.assertEquals(testmin.length, testmin.size);
-        Assert.assertEquals(testmax.length, testmax.size);
+    @Test(timeout = 1000)
+    public void MergeTest() {
+        BinomialHeap test = new BinomialHeap();
+        test.add(-1);
+        test = BinomialHeap.merge(test, testmin);
+        System.out.println("Merge test");
+        test.printHeap();
     }
     
-    @Test
+    @Test(timeout = 1000)
+    public void InsertTest() {
+        //Assert.assertEquals(10, testmin.size());
+    }
+    
+    @Test(timeout = 5000)
     public void PopTest() {
+        System.out.println("Pop test");
         for(int i = 0; i < 10; i++) {
-            Assert.assertEquals(this.testmin.PopRoot(), i);
-        }
-        for(int i = 9; i >= 0; i--) {
-            Assert.assertEquals(this.testmax.PopRoot(), i);
+            System.out.println(testmin.getMinumum().key + " : " + i);
+            Assert.assertEquals(i, this.testmin.extractMinimumNode().key);
         }
     }
 }

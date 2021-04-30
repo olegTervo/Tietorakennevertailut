@@ -1,11 +1,12 @@
-# Viikko 5
+# Viikko 6
 
 ## Tehty
- - binäärikeko tehty  
- - binäärikeko testattu (93% jacoco)  
- - fibonacci keko aloitettu  
+ - binäärikeko tehty    
+ - fibonacci keko tehty  
  - fibonacci keko testattu (95% jacoco)  
+ - vertaisarviointi 2
+ - binomial keko tehty  
+ - binomial keko testattu (82% jacoco)
 ## TODO
  - dokumentaatio kuntoon  
- - vertaisarvionti 2  
- - demo varaus  
+ - demo varaus
