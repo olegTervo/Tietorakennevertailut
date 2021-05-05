@@ -9,10 +9,12 @@ import tiralabra.tietorakennevertailut.redblacktree.RedBlackTreeNode;
 
 public class RedBlackTreeUnitTest {
     private RedBlackTree test;
+    private int n;
     
     @Before
     public void setUp() {
         test = new RedBlackTree();
+        this.n = 10000000; // 15s
     }
     
     @After
@@ -20,7 +22,7 @@ public class RedBlackTreeUnitTest {
         test = null;
     }
     
-    @Test
+    //@Test
     public void testInsert() {
         test.insert(1);
         
@@ -67,6 +69,28 @@ public class RedBlackTreeUnitTest {
         Assert.assertNotNull(test.root.right);
     }
     
+    //@Test //- That didn't work 
+    public void stressTest() {
+        for(int i = 0; i < n; i++) {
+            test.insert(i);
+            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
+        }
+        for(int i = 0; i < n/2; i++) {
+            test.delete(new RedBlackTreeNode(i));
+            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
+        }
+        for(int i = 0; i < n/2; i++) {
+            test.insert(i);
+            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
+        }
+        for(int i = 0; i < n; i++) {
+            test.delete(new RedBlackTreeNode(i));
+            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
+        }
+        
+        Assert.assertNull(test.root);
+    }
+    
     @Test
     public void testContains() {
         test.insert(2);
@@ -108,5 +132,25 @@ public class RedBlackTreeUnitTest {
         
         Assert.assertTrue(test.root.isNill());
         
+    }
+    
+    @Test
+    public void insertDelete() {
+        for(int i = 1; i < n; i++) {
+            test.insert(i);
+            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
+        }
+        for(int i = 1; i < n; i++) {
+            test.delete(new RedBlackTreeNode(i));
+            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
+        }
+        /*for(int i = n; i > 0; i--) {
+            test.insert(i);
+            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
+        }
+        for(int i = n; i > 0; i--) {
+            test.delete(new RedBlackTreeNode(i));
+            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
+        }*/
     }
 }

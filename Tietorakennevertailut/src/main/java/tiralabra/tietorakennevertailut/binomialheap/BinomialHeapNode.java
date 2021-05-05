@@ -25,6 +25,10 @@ public class BinomialHeapNode {
     }
     
     public static BinomialHeapNode copy(BinomialHeapNode other) {
+        /*if(other == null) {
+            return null;
+        }*/
+        
         BinomialHeapNode ret = new BinomialHeapNode();
         ret.key = other.key;
         ret.degree = other.degree;

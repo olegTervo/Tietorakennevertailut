@@ -24,27 +24,28 @@ public class FibonacciHeap {
         FibonacciHeapNode rootNode = this.min;
         
         if (rootNode != null) {
-            FibonacciHeapNode child = rootNode.child;
+            FibonacciHeapNode child = rootNode.getChild();
             FibonacciHeapNode childOnStart = child;
             FibonacciHeapNode temp;
             
             if (child != null) {
+                System.out.println("Strange things...");
                 do {
-                    temp = child.right;
+                    temp = child.getRight();
                     Insert(child);
                     child.parent = null;
                     child = temp;
-                } while (child != null && !temp.equals(childOnStart));
+                } while (child != null && !child.equals(childOnStart));
             }
             
-            rootNode.left.right = rootNode.right;
-            rootNode.right.left = rootNode.left;
+            rootNode.left.right = rootNode.getRight();
+            rootNode.right.left = rootNode.getLeft();
             rootNode.child = null;
             
             if (rootNode.equals(rootNode.right)) {
                 this.min = null;
             } else {
-                this.min = rootNode.right;
+                this.min = rootNode.getRight();
                 this.FixConflicts();
             }
             this.size--;
@@ -69,7 +70,7 @@ public class FibonacciHeap {
         } else {
             min.left.right = node;
             node.right = min;
-            node.left = min.left;
+            node.left = min.getLeft();
             min.left = node;
                     
             if (node.key < min.key) {
@@ -80,26 +81,31 @@ public class FibonacciHeap {
     }
     
     private void FixConflicts() {
-        int degree = GetDegree();
-        FibonacciHeapNode[] nodes = new FibonacciHeapNode[degree+1];
+        double phi = (1 + Math.sqrt(5)) / 2;
+        int Dofn = (int) (Math.log(this.size) / Math.log(phi));
         
-        for (int i = 0; i < degree; i++) {
+        FibonacciHeapNode[] nodes = new FibonacciHeapNode[Dofn+1];
+        
+        for (int i = 0; i < Dofn+1; i++) {
             nodes[i] = null;
         }
         
-        FibonacciHeapNode x = min;
+        FibonacciHeapNode w = min;
         
-        if (x != null) { 
+        if (w != null) { 
+            FibonacciHeapNode check = min;
             do {
+                FibonacciHeapNode x = w;
                 int d = x.degree;
                 
                 while (nodes[d] != null) {
                     FibonacciHeapNode y = nodes[d];
                     
                     if (x.key > y.key) {
-                        FibonacciHeapNode tempNode = new FibonacciHeapNode(x);
+                        FibonacciHeapNode tempNode = x;
                         x = y;
                         y = tempNode;
+                        w = x;
                     }
                     if(y.equals(min)){
                         this.min = x;
@@ -110,17 +116,17 @@ public class FibonacciHeap {
                     if(y.right.equals(x)) {
                         this.min = x;
                     }
-                    
+                    check = x;
                     nodes[d] = null;
                     d++;
                 }
                 nodes[d] = x;
-                x = x.right;
-            } while (x != null && !x.equals(this.min));
+                w = w.getRight();
+            } while (w != null && !w.equals(check));
             
             this.min = null;
             
-            for (int i = 0; i < degree; ++i) {
+            for (int i = 0; i < Dofn+1; ++i) {
                 if (nodes[i] != null) {
                     Insert(nodes[i]);
                 }
@@ -181,4 +187,26 @@ public class FibonacciHeap {
         }
     }
 
+    public void print() {
+        print(min);
+        System.out.println();
+    }
+
+    private void print(FibonacciHeapNode c) {
+        System.out.print("(");
+        if (c == null) {
+            System.out.print(")");
+            return;
+        } else {
+            FibonacciHeapNode temp = c;
+            do {
+                System.out.print(temp.key);
+                FibonacciHeapNode k = temp.child;
+                print(k);
+                System.out.print("->");
+                temp = temp.right;
+            } while (temp != c);
+            System.out.print(")");
+        }
+    }
 }

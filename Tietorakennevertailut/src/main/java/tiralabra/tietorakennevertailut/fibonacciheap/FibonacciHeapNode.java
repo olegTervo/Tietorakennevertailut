@@ -26,6 +26,22 @@ public class FibonacciHeapNode {
         this.key = another.key;
     }
     
+    public FibonacciHeapNode getParent() {
+        return this.parent;
+    }
+    
+    public FibonacciHeapNode getChild() {
+        return this.child;
+    }
+    
+    public FibonacciHeapNode getLeft() {
+        return this.left;
+    }
+    
+    public FibonacciHeapNode getRight() {
+        return this.right;
+    }
+    
     @Override
     public boolean equals(Object o) {
         if(o == null) return false;

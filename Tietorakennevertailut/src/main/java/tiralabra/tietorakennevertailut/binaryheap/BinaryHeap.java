@@ -42,13 +42,11 @@ public class BinaryHeap {
         this.size++;
         
         if(this.isMinHeap) {
-            System.out.println("min HEAP HERE!");
             while(i != 0 && heap[i] < heap[Parent(i)]) { 
                 Swap(i, Parent(i));
                 i = Parent(i);
             }
         } else {
-            System.out.println("MAX HEAP HERE!");
             while(i != 0 && heap[i] > heap[Parent(i)]) {
                 Swap(i, Parent(i));
                 i = Parent(i);
@@ -123,4 +121,11 @@ public class BinaryHeap {
         }
     }
     
+    public void print() {
+        System.out.print("[" + this.heap[0]);
+        for(int i = 1; i < this.length; i++) {
+            System.out.print(", " + this.heap[i]);
+        }
+        System.out.println("]");
+    }
 }

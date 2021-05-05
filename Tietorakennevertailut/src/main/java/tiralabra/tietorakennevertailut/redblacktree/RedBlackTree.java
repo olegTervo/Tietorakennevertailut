@@ -32,7 +32,6 @@ public class RedBlackTree {
     }
     
     public void delete(RedBlackTreeNode node) {
-        System.out.println("Root node key: " + (node.parent == null));
         
         if(node != null && root != null) {
             if(node.left == null && node.right == null) {
@@ -189,7 +188,6 @@ public class RedBlackTree {
     }
     
     private void insert1(RedBlackTreeNode node) {
-        System.out.println("insert1");
         if(node.parent == null) {
             node.isRed = false;
         } else {
@@ -198,14 +196,12 @@ public class RedBlackTree {
     }
     
     private void insert2(RedBlackTreeNode node) {
-        System.out.println("insert2");
         if(node.parent.isRed) {
             insert3(node);
         }
     }
     
     private void insert3(RedBlackTreeNode node) {
-        System.out.println("insert3");
         RedBlackTreeNode uncle = node.getUncle();
         
         if(!uncle.isNill() && uncle.isRed) {
@@ -221,7 +217,6 @@ public class RedBlackTree {
     }
     
     private void insert4(RedBlackTreeNode node) {
-        System.out.println("insert4");
         RedBlackTreeNode grandparent = node.getGrandparent();
         
         if(node.equals(node.parent.right) && node.parent.equals(grandparent.left)) {
@@ -236,7 +231,6 @@ public class RedBlackTree {
     }
     
     private void insert5(RedBlackTreeNode node) {
-        System.out.println("insert5");
         RedBlackTreeNode grandparent = node.getGrandparent();
         
         node.parent.isRed = false;
@@ -244,7 +238,6 @@ public class RedBlackTree {
         if(node.equals(node.parent.left) && node.parent.equals(grandparent.left)) {
             rotateRight(grandparent);
         } else {
-            System.out.println("insert5 rotate left");
             rotateLeft(grandparent);
         }
     }
@@ -253,7 +246,6 @@ public class RedBlackTree {
         RedBlackTreeNode childNode = node.right;
         
         childNode.parent = node.parent;
-        System.out.println("parent of root " + node.parent);
         if(node.parent != null) {
             if(node.parent.left.equals(node)){
                 node.parent.left = childNode;
