@@ -37,6 +37,12 @@ merge() - O(1)
 ## [Red–black tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)  
 - is a kind of self-balancing binary search tree. Each node stores an extra bit representing "color" ("red" or "black"), used to ensure that the tree remains balanced during insertions and deletions.
 
+### Properties
+- Each node is either red or black.
+- All NIL leaves (figure 1) are considered black.
+- If a node is red, then both its children are black.
+- Every path from a given node to any of its descendant NIL leaves goes through the same number of black nodes.
+
 ![A trie for keys "A", "to", "tea", "ted", "ten", "i", "in", and "inn".](https://upload.wikimedia.org/wikipedia/commons/4/41/Red-black_tree_example_with_NIL.svg)
 
 ### Complexity
