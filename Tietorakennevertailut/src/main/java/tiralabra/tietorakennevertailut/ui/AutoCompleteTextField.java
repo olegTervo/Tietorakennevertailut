@@ -22,6 +22,18 @@ public class AutoCompleteTextField extends TextField {
     public AutoCompleteTextField() {
         super();
         entries = new Trie();
+        
+        entries.insert("echo 'Hello!'");
+        entries.insert("test");
+        entries.insert("generate data");
+        entries.insert("generator");
+        entries.insert("end");
+        entries.insert("end");
+        entries.insert("ending");
+        entries.insert("e");
+        entries.insert("en");
+        entries.insert("ent");
+        
         entriesPopup = new ContextMenu();
         textProperty().addListener(new ChangeListener<String>() {
             @Override

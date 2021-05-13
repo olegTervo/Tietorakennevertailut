@@ -24,7 +24,7 @@ public class BinomialHeapClearUnitTest {
     @Before
     public void setUp() {
         this.testmin = new BinomialHeapClear();
-        this.n = 20;
+        this.n = 15;
         
         for(int i = 0; i < n; i++) {
             this.testmin.add(i);

@@ -9,7 +9,6 @@ import tiralabra.tietorakennevertailut.binomialheap.BinomialHeap;
 public class BinomialHeapUnitTest {
     
     private BinomialHeap testmin;
-    private BinomialHeap testmax;    
     
     @Before
     public void setUp() {
@@ -26,7 +25,6 @@ public class BinomialHeapUnitTest {
     @After
     public void tearDown() {
         this.testmin = null;
-        this.testmax = null;
     }
     
     @Test(timeout = 1000)
@@ -36,11 +34,6 @@ public class BinomialHeapUnitTest {
         test = BinomialHeap.merge(test, testmin);
         System.out.println("Merge test");
         test.printHeap();
-    }
-    
-    @Test(timeout = 1000)
-    public void InsertTest() {
-        //Assert.assertEquals(10, testmin.size());
     }
     
     @Test(timeout = 5000)

@@ -29,7 +29,6 @@ public class FibonacciHeap {
             FibonacciHeapNode temp;
             
             if (child != null) {
-                System.out.println("Strange things...");
                 do {
                     temp = child.getRight();
                     Insert(child);
@@ -135,20 +134,9 @@ public class FibonacciHeap {
         
     }
     
-    private int GetDegree() {
-        int ret = 0;
-        int s = this.size;
-        while(s > 0) {
-            s = s / 2;
-            ret++;
-        }
-        
-        return ret;
-    }
-
     private void Link(FibonacciHeapNode y, FibonacciHeapNode x) {
-        y.left.right = y.right;
-        y.right.left = y.left;
+        y.left.right = y.getRight();
+        y.right.left = y.getLeft();
         
         if(x.right.equals(x)) {
             this.min = x;
@@ -161,8 +149,8 @@ public class FibonacciHeap {
         if(x.child == null) {
             x.child = y;
         }
-        y.right = x.child;
-        y.left = x.child.left;
+        y.right = x.getChild();
+        y.left = x.child.getLeft();
         x.child.left.right = y;
         x.child.left = y;
         

@@ -69,28 +69,6 @@ public class RedBlackTreeUnitTest {
         Assert.assertNotNull(test.root.right);
     }
     
-    //@Test //- That didn't work 
-    public void stressTest() {
-        for(int i = 0; i < n; i++) {
-            test.insert(i);
-            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
-        }
-        for(int i = 0; i < n/2; i++) {
-            test.delete(new RedBlackTreeNode(i));
-            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
-        }
-        for(int i = 0; i < n/2; i++) {
-            test.insert(i);
-            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
-        }
-        for(int i = 0; i < n; i++) {
-            test.delete(new RedBlackTreeNode(i));
-            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
-        }
-        
-        Assert.assertNull(test.root);
-    }
-    
     @Test
     public void testContains() {
         test.insert(2);
@@ -140,17 +118,10 @@ public class RedBlackTreeUnitTest {
             test.insert(i);
             Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
         }
+        
         for(int i = 1; i < n; i++) {
             test.delete(new RedBlackTreeNode(i));
             Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
         }
-        /*for(int i = n; i > 0; i--) {
-            test.insert(i);
-            Assert.assertTrue(test.contains(new RedBlackTreeNode(i)));
-        }
-        for(int i = n; i > 0; i--) {
-            test.delete(new RedBlackTreeNode(i));
-            Assert.assertFalse(test.contains(new RedBlackTreeNode(i)));
-        }*/
     }
 }

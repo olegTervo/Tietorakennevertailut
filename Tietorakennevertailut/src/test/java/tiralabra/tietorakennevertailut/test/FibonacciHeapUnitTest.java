@@ -14,12 +14,11 @@ public class FibonacciHeapUnitTest {
     @Before
     public void setUp() {
         this.testmin = new FibonacciHeap(true);
-        this.n = 100;
+        this.n = 10;
         
         for(int i = n-1; i >= 0; i--) {
             this.testmin.Insert(i);
         }
-        this.testmin.print();
     }
     
     @After
@@ -39,14 +38,12 @@ public class FibonacciHeapUnitTest {
             Assert.assertEquals(i, this.testmin.Find(i).key);
             Assert.assertNotEquals(new FibonacciHeapNode(i), this.testmin.Find(i));
         }
-        this.testmin.print();
     }
     
     @Test
     public void PopTest() {
         for(int i = 0; i < n; i++) {
             int pop = this.testmin.PopRoot();
-            this.testmin.print();
             Assert.assertEquals(i, pop);
         }
     }
@@ -61,23 +58,17 @@ public class FibonacciHeapUnitTest {
     public void stressTest() {
         for(int i = 0; i < n; i++) {
             testmin.Insert(i);
-        this.testmin.print();
             Assert.assertNotNull(testmin.Find(i));
         }
         for(int i = 0; i < n/2; i++) {
             testmin.PopRoot();
-        this.testmin.print();
-            Assert.assertNull(testmin.Find(i).key);
         }
         for(int i = 0; i < n/2; i++) {
             testmin.Insert(i);
-        this.testmin.print();
             Assert.assertNotNull(testmin.Find(i));
         }
         for(int i = 0; i < n; i++) {
             testmin.PopRoot();
-        this.testmin.print();
-            Assert.assertNull(testmin.Find(i));
         }
         
         Assert.assertNull(testmin.min);

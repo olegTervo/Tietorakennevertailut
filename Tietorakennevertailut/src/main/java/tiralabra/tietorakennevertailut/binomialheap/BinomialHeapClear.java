@@ -79,7 +79,7 @@ public class BinomialHeapClear {
     }
 
     private void fixConflicts() {
-        
+        printHeap();
         if(head != null && head.sibling != null) {
             BinomialHeapNode previous = head;
             BinomialHeapNode current = head.sibling;
@@ -182,7 +182,7 @@ public class BinomialHeapClear {
         return min;
     }
     
-    public BinomialHeapNode extractMinimumNode() {
+     public BinomialHeapNode extractMinimumNode() {
         BinomialHeapNode min = getMinumum();
         if(min.key == 11) printHeap();
         BinomialHeapNode next = this.head;

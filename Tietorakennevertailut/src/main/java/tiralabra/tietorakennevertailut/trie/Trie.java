@@ -8,18 +8,7 @@ public class Trie {
 
     public Trie() {
         root = new TrieNode();
-        /*
-        insert("echo 'Hello!'");
-        insert("test");
-        insert("generate data");
-        insert("generator");
-        insert("end");
-        insert("end");
-        insert("ending");
-        insert("e");
-        insert("en");
-        insert("ent");
-        */
+        
     }
 
     public void insert(String word) {
