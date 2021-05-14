@@ -51,7 +51,7 @@ delete() - O(log n)
 insert() - O(log n)  
 
 ### Käyttö
-set, map (STL-kirjasto C++)
+set, map (STL-kirjasto C++)  
 TreeMap Java
 
 ## Lähteet
